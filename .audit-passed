@@ -1,0 +1,1 @@
+Audited 2026-03-22. Fixed: unsafe JSON.parse cast replaced with structural validation, regex injection via unescaped ? character. Verified: no throw/try/catch, no enum/switch, fromThrowable used correctly, 27 tests passing.

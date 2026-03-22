@@ -1,6 +1,6 @@
 {
   "name": "mcp-sentinel-gate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "State-based tool gating for MCP servers",
   "bin": {

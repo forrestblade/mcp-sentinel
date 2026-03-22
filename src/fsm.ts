@@ -4,7 +4,7 @@ import type { FsmConfig, FsmError, GateResult } from './types.js'
 
 function patternToRegex (pattern: string): RegExp {
   if (pattern === '*') return /^.*$/
-  const escaped = pattern.replace(/[.+^${}()|[\]\\]/g, '\\$&')
+  const escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, '\\$&')
   const regexStr = escaped.replace(/\*/g, '.*')
   return new RegExp(`^${regexStr}$`)
 }
