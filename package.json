@@ -1,0 +1,49 @@
+{
+  "name": "mcp-sentinel",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "State-based tool gating for MCP servers",
+  "bin": {
+    "mcp-sentinel": "bin/mcp-sentinel.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "validate": "tsc --noEmit && eslint ."
+  },
+  "keywords": [
+    "mcp",
+    "sentinel",
+    "fsm",
+    "gating",
+    "tool-allowlist"
+  ],
+  "author": "Forrest",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@valencets/resultkit": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "neostandard": "^0.12.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
